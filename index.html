@@ -103,41 +103,102 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Survey Form</h1>
-        <form>
+    <div class="container ">
+        <header class="header">
+            <h1 id="title">
+                Survey about Career Interests
+            </h1>
+            <p id="description">
+                Please share the fields of your interest
+            </p>
+        </header>
+        <form action="" id="survey-form">
+
             <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" class="formControl" placeholder="Enter your name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="formControl" placeholder="Enter your Email" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="number" name="phone" id="phone" class="formControl" placeholder="Enter your phone number" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Address <span class="clue">(optional)</span></label>
+                <input type="text" name="address" id="address" class="formControl" placeholder="Enter your address">
+            </div>
+            
+            <div class="form-group">
+                <p id="quest">Which option best describe your current role</p>
+                <select name="role" required id="dropdown" class="formControl">
+                    <option value disabled selected >Select current role</option>
+                    <option value="1st year student">1st year student</option>
+                    <option value="2nd year student">2nd year student</option>
+                    <option value="3rd year student">3rd year student</option>
+                    <option value="4th year student">4th year student</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p id="quest">How do you know more about your interested subjects?</p>
+                <label for="">
+                    <input type="radio" name="source" value="seniors"
+                    class="inputRadio"
+                    checked> Seniors
+                </label>
+                <label for="">
+                    <input type="radio" name="source" value="vlogs"
+                    class="inputRadio"
+                    > YT Vlogs
+                </label>
+                <label for="">
+                    <input type="radio" name="source" value="social-media"
+                    class="inputRadio"
+                    > Social Media
+                </label>
+                <label for="">
+                    <input type="radio" name="source" value="newspaper"
+                    class="inputRadio"
+                    > Newspaper
+                </label>
+                <label for="">
+                    <input type="radio" name="source" value="other"
+                    class="inputRadio"
+                    > Other
+                </label>
             </div>
 
             <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <p id="quest">What would you like to make as your career? </p>
+                <label for="">
+                    <input type="checkbox" name="prefer" class="checkbox" value="front-end-dev"> Front-end Developer
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" class="checkbox" value="back-end-dev"> Back-end Developer
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" class="checkbox" value="app-dev">  Android App Developer
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" class="checkbox" value="soft-engineering"> Software Engineering
+                </label>
+                <label for="">
+                    <input type="checkbox" name="prefer" class="checkbox" value="other"> Other
+                </label>
             </div>
-
+            
             <div class="form-group">
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" min="18" max="120">
+                <p id="quest">Give us your feedback</p>
+                <textarea name="feedback"  cols="30" rows="5"  id="feedback" class="textarea" placeholder="Enter your feedback here..."></textarea>
             </div>
-
             <div class="form-group">
-                <label for="feedback">Feedback:</label>
-                <textarea id="feedback" name="feedback"></textarea>
+                <button type="submit" id="submit" class="btn">Submit</button>
             </div>
-
-            <div class="form-group">
-                <label>How satisfied are you?</label>
-                <div class="checkbox-group">
-                    <label><input type="radio" name="satisfaction" value="very"> Very Satisfied</label>
-                    <label><input type="radio" name="satisfaction" value="satisfied"> Satisfied</label>
-                    <label><input type="radio" name="satisfaction" value="neutral"> Neutral</label>
-                    <label><input type="radio" name="satisfaction" value="dissatisfied"> Dissatisfied</label>
-                </div>
-            </div>
-
-            <button type="submit">Submit Survey</button>
         </form>
     </div>
 </body>
-</html>
